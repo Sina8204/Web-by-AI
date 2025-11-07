@@ -1,0 +1,238 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    /* Dark blue/grey */
+    color: #ecf0f1;
+    /* Light grey */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background: #34495e;
+    /* Slightly lighter dark blue/grey */
+    color: #ecf0f1;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1abc9c;
+    /* Turquoise */
+    border-bottom: 2px solid #1abc9c;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    /* Allows main content to grow and push footer down */
+    padding: 2rem 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+main section {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    color: #34495e;
+    font-size: 1.8em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+h4 {
+    color: #555;
+    font-size: 1.4em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #16a085;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+ol {
+    list-style: decimal;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Code Blocks */
+pre {
+    background-color: #ecf0f1;
+    /* Light grey for code block background */
+    color: #34495e;
+    /* Darker text for code */
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1.5em;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+    border: 1px solid #ddd;
+}
+
+code {
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    background-color: #e0e6eb;
+    /* Slightly lighter for inline code */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    color: #c0392b;
+    /* Reddish for inline code */
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    /* Pushes footer to the bottom */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul {
+        padding: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

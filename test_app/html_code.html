@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Engine - Documentation</title>
+    <link rel="stylesheet" href="game_engine_css_cod.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>My Game Engine</h1>
+            <p>Powerful and flexible game development platform</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#core-concepts">Core Concepts</a></li>
+                <li><a href="#api-reference">API Reference</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to My Game Engine Documentation</h2>
+            <p>This documentation provides a comprehensive guide to using My Game Engine. Whether you're a beginner or
+                an experienced developer, you'll find everything you need to create amazing games.</p>
+            <p>Start by exploring the sections in the navigation bar to learn about installation, core features, API
+                details, and practical examples.</p>
+        </section>
+
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <h3>1. Installation</h3>
+            <p>To install My Game Engine, follow these steps:</p>
+            <pre><code>npm install my-game-engine</code></pre>
+            <p>Alternatively, you can download the latest release from our <a href="#">GitHub page</a>.</p>
+
+            <h3>2. Your First Project</h3>
+            <p>Create a new project directory and initialize it:</p>
+            <pre><code>mkdir my-first-game
+cd my-first-game
+my-engine init</code></pre>
+            <p>This will set up a basic project structure with a <code>game.js</code> file.</p>
+        </section>
+
+        <section id="core-concepts">
+            <h2>Core Concepts</h2>
+            <h3>Scenes</h3>
+            <p>Games are organized into <code>Scenes</code>. Each scene represents a distinct part of your game, like a
+                main menu, a level, or a game over screen.</p>
+            <pre><code class="language-javascript">
+import { Scene } from 'my-game-engine';
+
+class MyGameScene extends Scene {
+    constructor() {
+        super();
+        this.player = null;
+    }
+
+    preload() {
+        // Load assets here
+        this.load.image('player', 'assets/player.png');
+    }
+
+    create() {
+        // Create game objects here
+        this.player = this.add.sprite(100, 100, 'player');
+    }
+
+    update(deltaTime) {
+        // Game logic goes here
+        this.player.x += 50 * deltaTime;
+    }
+}
+            </code></pre>
+
+            <h3>Game Objects</h3>
+            <p><code>Game Objects</code> are the building blocks of your scene, such as sprites, text, and other
+                interactive elements.</p>
+            <pre><code class="language-javascript">
+// Creating a text object
+const scoreText = this.add.text(10, 10, 'Score: 0', {
+    fontFamily: 'Arial',
+    fontSize: '24px',
+    fill: '#ffffff'
+});
+            </code></pre>
+        </section>
+
+        <section id="api-reference">
+            <h2>API Reference</h2>
+            <p>Detailed documentation for all classes, methods, and properties.</p>
+
+            <h3>Engine Class</h3>
+            <p>The main class to initialize and run your game.</p>
+            <ul>
+                <li><code>new Engine(config)</code>: Creates a new engine instance.</li>
+                <li><code>engine.start()</code>: Starts the game loop.</li>
+                <li><code>engine.stop()</code>: Stops the game loop.</li>
+            </ul>
+
+            <h3>Scene Class</h3>
+            <p>Base class for all game scenes.</p>
+            <ul>
+                <li><code>scene.preload()</code>: (Lifecycle method) Called to load assets.</li>
+                <li><code>scene.create()</code>: (Lifecycle method) Called to create game objects.</li>
+                <li><code>scene.update(deltaTime)</code>: (Lifecycle method) Called every frame for game logic.</li>
+                <li><code>scene.add</code>: Factory for creating game objects.</li>
+                <li><code>scene.load</code>: Asset loader instance.</li>
+            </ul>
+            <!-- More API entries would go here -->
+        </section>
+
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>Explore practical examples to see how different features of My Game Engine can be used.</p>
+            <ul>
+                <li><a href="#">Basic Platformer</a>: A simple 2D platforming game.</li>
+                <li><a href="#">Space Shooter</a>: An example of a classic top-down shooter.</li>
+                <li><a href="#">UI Showcase</a>: Demonstrates various UI components.</li>
+            </ul>
+        </section>
+
+        <section id="about">
+            <h2>About My Game Engine</h2>
+            <p>My Game Engine is developed by a passionate team of game developers, aiming to provide an easy-to-use yet
+                powerful tool for creating games across various platforms.</p>
+            <p>Our goal is to foster a community where creativity thrives. Feel free to contribute to our open-source
+                project or join our <a href="#">Discord server</a> for support and discussions.</p>
+            <p>&copy; 2023 My Game Engine. All rights reserved.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Game Engine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="game_engine_js_code.js"></script>
+</body>
+
+</html>
