@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Video Points Editor</title>
+    <link rel="stylesheet" href="test_7_css_cod.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div id="app-layout">
+        <div id="localVideoPlayerSection">
+            <h2>Play Local Video</h2>
+            <input type="file" accept="video/*" id="videoFileInput" aria-label="Choose local video file">
+            <video controls id="localVideoPlayer" poster="placeholder.png" aria-label="Local Video Player"></video>
+            <p id="videoPlayerMessage">No video selected</p>
+        </div>
+
+        <div class="container">
+            <h1>Tutorial Video Points</h1>
+
+            <div class="input-section">
+                <input type="text" id="videoTitle" placeholder="Video Title" aria-label="Video Title">
+                <!-- Removed videoUrl input -->
+                <textarea id="tutorialPoints" placeholder="Write your tutorial video points here..." aria-label="Tutorial Points"></textarea>
+                <div class="input-buttons">
+                    <button id="captureFrameButton">Capture Frame</button>
+                    <button id="saveButton">Save Tutorial</button>
+                    <button id="savePdfButton">Save to PDF</button>
+                </div>
+            </div>
+
+            <div class="tutorials-list-section">
+                <h2>Saved Tutorials</h2>
+                <div id="savedTutorialsContainer">
+                    <!-- Saved tutorials will be loaded here by JavaScript -->
+                </div>
+                <div id="capturedFramePreviewContainer">
+                    <!-- Captured frame preview will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="test_7_js_code.js"></script>
+</body>
+</html>
