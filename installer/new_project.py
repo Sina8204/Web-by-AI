@@ -7,11 +7,10 @@ import re
 import json
 import threading
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__) , '..' , 'classes')))
 from file_explorer_class import open_fileExplorer
 from api_class import models
 from edit_project import edit_project_class
-from classes.operator_and_waiting_class import wait
+from operator_and_waiting_class import wait
 
 fe = open_fileExplorer()
 model_web_creator = models()

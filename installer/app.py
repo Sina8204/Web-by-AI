@@ -2,9 +2,9 @@ import sys , os
 import tkinter as tk
 from tkinter import ttk
 import json
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__) , '..' , 'classes')))
-from classes.new_project import new_project_class
-from classes.edit_project import edit_project_class
+
+from new_project import new_project_class
+from edit_project import edit_project_class
 
 class web_by_ai(tk.Tk):
     def __init__(self):

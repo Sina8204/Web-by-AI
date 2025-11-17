@@ -5,7 +5,6 @@ import json
 import re
 import subprocess
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__) , '..' , 'classes')))
 from file_explorer_class import open_fileExplorer
 from api_class import models
 from web_runner_class import WebRunner
