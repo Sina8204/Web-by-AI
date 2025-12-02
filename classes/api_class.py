@@ -1,8 +1,6 @@
 from google import genai 
 import re
 
-#"AIzaSyBJv7g6nHK3GE0kIj2JzPgrCO3nXMil3N8"
-
 class models :
     def __init__(self):
         self.key = ""
@@ -24,4 +22,5 @@ class models :
         try:
             return self.response_text
         except Exception as e:
+
             return f"Error : {e}"
