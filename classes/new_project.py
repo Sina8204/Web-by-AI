@@ -15,7 +15,7 @@ from classes.operator_and_waiting_class import wait
 
 fe = open_fileExplorer()
 model_web_creator = models()
-# client = genai.Client(api_key="AIzaSyALhLOtosNenar3KFvEpmFrA2n7TAavxqY")
+# client = genai.Client(api_key="api_key")
 placeholder_text = "Enter your idea :)\nWhat kind of site do you want to build?\nJust write to me what's on your mind ;)"
 placeholder_entry = "Enter your api key..."
 def save_code_blocks(model_output: str, project_name: str, output_dir: str = "."):
@@ -215,4 +215,5 @@ class new_project_class():
         #     config=genai.types.GenerateContentConfig(system_instruction=sys_instruction),
         #     contents=user_input
         # )
+
         #print(f"Your code : \n {response.text}")
